@@ -1,0 +1,93 @@
+
+
+
+https://www.callicoder.com/spring-boot-docker-example/
+docker image ls
+docker build .
+
+docker build -t spring-cloud-eureka-example .
+docker run  spring-cloud-eureka-example
+
+
+docker build -t employee-producer
+docker run -p 8761:8761 spring-cloud-eureka-example 
+
+
+docker run -p 8761:8761 spring-cloud-eureka-example
+
+steps
+--------
+docker build -t zuul-api-gateway-server .
+docker image ls
+docker run  zuul-api-gateway-server
+
+docker run -p 8079:8079 zuul-api-gateway-server --network=host
+
+docker run  zuul-api-gateway-server
+
+docker rmi 320630482166
+
+docker build -t account-service .
+
+docker run  account-service
+
+docker run -p 9092:9092 account-service --network=host
+
+
+docker build -t demo .
+docker run -p 8094:8094 demo --network=host
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+
+docker run -p 8080:8080 zuul-api-gateway-server
+
+https://stackoverflow.com/questions/49772210/zuul-is-not-routing-call-to-the-spring-boot-service-on-docker-container
+
+docker network ls
+docker run -itd --network=host --name zuul-api-gateway-server zuul-api-gateway-server
+
+docker image ls
+docker build -t eureka-server .
+docker run -p 8090:8090 eureka-server
+
+
+
+===============================
+updated code
+===============================
+
+docker build -t eureka-service-registry .
+
+docker run -p 9091:9091 eureka-service-registry
+
+docker build -t employee-zuul-service .
+
+docker run -p 8084:8084 employee-zuul-service
+
+docker build -t employee-producer .
+
+docker run -p 8080:8080 employee-producer
+
+docker build -t employee-consumer .
+
+docker run -p 8081:8081 employee-consumer
+
+10.0.75.1
+
+10.0.75.1 190e7d3eebd3
+10.0.75.1 60b41cbe2fd7
+10.0.75.1 08b94a9772a0 
+
+
+http://localhost:8081/getEmployee
+http://localhost:8079/employee
+http://localhost:8084/producer/employee
+
+
+
+
+
+
+
+
+
